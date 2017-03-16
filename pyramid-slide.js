@@ -49,3 +49,7 @@ function displayHeight(height){
     heightStr = String(height)
     document.querySelector("#height-string").innerHTML = heightStr
 }
+
+function getHeight(selectObject) {
+    return value = document.querySelector("#height").value;
+}
