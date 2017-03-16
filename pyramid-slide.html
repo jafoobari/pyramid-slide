@@ -5,6 +5,7 @@
         #pyramid {
             line-height: 0;
             font-size: 30px;
+            color: darkmagenta;
         }
 
         body {
@@ -12,19 +13,46 @@
             text-align: center;
         }
 
+
+
+        /*section *****************************************************************/
+        #maindiv{
+            border: #A58 2px solid;
+            width: 60%;
+            margin: 0 auto;
+            margin-top: 5px;
+            background-color: #aa99a5;
+        }
+
+        #pyramid-bricks{
+            padding: 10px;
+            color: blueviolet;
+            font-style: bold;
+            border: thick;
+            background-color: #aa99a5;
+
+        }
+
+        #height-string{
+            font-size: xx-large;
+            color: darkmagenta;
+            font-family: "Bodoni MT Black";
+        }
+
     </style>
 </head>
 <body>
 <h1></h1>
 
-
+    <div id="maindiv">
         <select id="pyramid-bricks" onchange = "drawPyramid(getHeight(this))">
-            <option>#</option>
-            <option>@</option>
-            <option>X</option>
+            <option class="brick">#</option>
+            <option class="brick">@</option>
+            <option class="brick">X</option>
+            <option class="brick">$</option>
         </select>
 
-        <input type="range" id="height" min="1" max="50" oninput="drawPyramid(this.value)"/>
+        <input type="range" id="height" min="1" max="20" oninput="drawPyramid(this.value)"/>
 
         <p id="height-string"></p>
 
@@ -34,9 +62,11 @@
 
 
 
-<br><br>
+    <br><br>
 
-<div id="pyramid"></div>
+        <div id="pyramid"></div>
+
+    </div>
 
 <script src="pyramid-slide.js"></script>
 </body>
